@@ -61,38 +61,19 @@ export default function AddDialog(props) {
           </DialogContentText>
           <form className={classes.root} noValidate autoComplete="off">
             <Autocomplete
-              // value={data.stage}
               onChange={(e, value) => setData({ ...data, stage: value.name})}
               id="auto-comp-stage"
               options={props.stages}
               getOptionLabel={(option) => option.name}
-              // style={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="ステージ" variant="outlined" />}
             />
             <Autocomplete
-              // value={data.stage}
               onChange={(e, value) => setData({ ...data, weapon: value.name})}
               id="auto-comp-weapon"
               options={props.weapons}
               getOptionLabel={(option) => option.name}
-              // style={{ width: 300 }}
               renderInput={(params) => <TextField {...params} label="ブキ" variant="outlined" />}
             />
-            {/* <Autocomplete
-              value={data.weapon}
-              onChange={(e) => setData({ ...data, weapon: e.target.value})}
-              id="auto-comp-weapon"
-              options={props.weapons}
-              getOptionLabel={(option) => option.name}
-              // style={{ width: 300 }}
-              renderInput={(params) => <TextField {...params} label="ブキ" variant="outlined" />}
-            /> */}
-            {/* <TextField id="stage-name"
-              onChange={(e) => setData({ ...data, stage: e.target.value})}
-              label="ステージ" variant="outlined" />
-            <TextField id="weapon-name"
-              onChange={(e) => setData({ ...data, weapon: e.target.value})}
-              label="ブキ" variant="outlined" /> */}
           </form>
         </DialogContent>
         <DialogActions>

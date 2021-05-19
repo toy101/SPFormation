@@ -13,10 +13,6 @@ import AddDialog from "./AddDialog";
 import getStageJson from "../utils/getStages";
 import getWeaponJson from "../utils/getWeapons";
 
-// import { Box, Fab } from "@material-ui/core";
-// import AddIcon from '@material-ui/icons/Add';
-// import { Link } from "react-router-dom";
-
 function createData(stage, weapon) {
   return {stage, weapon};
 }
@@ -62,11 +58,6 @@ class DenseTable extends Component {
     this.addNew = this.addNew.bind(this)
   }
 
-  // componentDidMount() {
-  //   const stageJSON = getStageJson();
-  //   const weaponJSON = getWeaponJson();
-  // }
-
   addNew(data) {
 
     let preRows = this.state.rows.slice();
@@ -106,13 +97,6 @@ class DenseTable extends Component {
             </TableBody>
           </Table>
         </TableContainer>
-        {/* <Box m={1} pt={1}>
-          <Link to='new'>
-            <Fab color="primary" aria-label="add">
-              <AddIcon />
-            </Fab>
-          </Link>
-        </Box> */}
         <AddDialog addFn={ this.addNew } stages = { this.state.stageJSON } weapons = { this.state.weaponJSON }/>
       </React.Fragment>
     );
