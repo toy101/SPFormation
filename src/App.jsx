@@ -41,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <h2>Spla-memo</h2>
+        <h2>SPFormation</h2>
         <BrowserRouter>
           <div>
             {/* <Route exact path='/' render={ () => <DenseTable addFn={ this.addNew } rows={ this.state.rows }/> }/> */}
